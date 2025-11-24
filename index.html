@@ -6,35 +6,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Michael Donar | UX Portfolio</title>
   <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@500;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Google Icons-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
 </head>
 
 <body>
-  <div class="head">
-    <div class="topnav" id="myTopnav">
-      <a href="#home" class="active">Home</a>
-      <a href="#news">About</a>
-      <a href="#contact">Projects</a>
-      <a href="#about">Contact</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="nav-branding">Michael Donar</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <!-- !!! Add Resume to this !!!-->
+            <button> Download Resume</button>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </div>
-  </div>
+  </header>
+  <section class="hero" aria-label="Decorative teal wave background">
+    <div class="content">
+      <div class="content-header">
+        <h1>Hello I am </h1>
+        <br>
+        <h2>Michael Donar</h2>
+        <p>Recent UX graduate looking to start the journey into the professional world of user research varied <br> in
+          many different industries.
+        </p>
+      <img src="./img/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.webp">
+      </div>
+    </div>
+    <!-- Layered SVG: top large teal region + two curved bands (band-shadow & band) -->
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img"
+      aria-hidden="false">
+      <!-- Main dark teal large curved shape (top-left heavy) -->
+      <!-- This path forms the big teal area occupying the top and curved down to the right -->
+      <path d="
+      M0,0
+      L1600,0
+      L1600,560
+      C1100,420 700,480 320,540
+      C160,560 40,560 0,540
+      Z" fill="#0f4a48" />
+    </svg>
+  </section>
+  <script src="./assets/main.js"></script>
 </body>
-<script>
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-</script>
 
 </html>

@@ -34,61 +34,229 @@ body {
   line-height: 1.5;
 }
 
-.head{
-  background-color: #01a995;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #000000;
+
+/* ### Navbar styles */
+header {
+  background: #000;
+  ;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+li {
+  list-style: none;
+}
+
+a {
+  font-family: 'work-sans', serif;
+  color: white;
   text-decoration: none;
-  font-size: 17px;
 }
 
-.topnav a:hover {
-  color: #0080c0;
+.nav-item button {
+  color: white;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 3px solid #008919;
+  line-height: 1.5;
+  padding: .5em;
 }
 
-.topnav a.active {
-  color: var(--primary-highlight);
+.nav-item button:hover {
+  color: dodgerblue;
+  border-color: dodgerblue;
+  transition: 0.3s ease-out;
+  font-size: .9em;
 }
 
-.topnav .icon {
+.nav-item button svg {
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1224px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-branding {
+  font-size: 2rem;
+  font-family: 'train-one';
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  z-index: 1;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.nav-link {
+  transition: 0.3s ease-out;
+}
+
+.nav-link:hover {
+  color: dodgerblue;
+  font-size: 1.1em;
+}
+
+.hamburger {
   display: none;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
+/* make sure the hamburger sits above other content when visible */
+.hamburger {
+  z-index: 2000;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+
+/* container that matches screenshot aspect & corner radius */
+.hero {
+  width: 100%;
+  min-height: 70vh;
+  /* adjust for preview height */
+  height: calc(100vh - 10px);
+  max-height: 1200px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: transparent;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  color: white;
+}
+
+/* Keep the svg full bleed and responsive */
+.hero svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* small decorative white cut at bottom-left like the screenshot */
+.corner-blob {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 22%;
+  height: 14%;
+  pointer-events: none;
+}
+
+/* optional content area on top of artwork */
+.content {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.content-header {
+  line-height: 1.5;
+  margin-left: 2.5em;
+  margin-top: 2em;
+  display: flexbox;
+}
+
+.content-header h1 {
+  font-family: 'train-one';
+  font-size: 4em;
+  display: block;
+}
+
+.content-header h2 {
+  font-size: 3.5em;
+}
+
+.content-header p {
+  margin-top: 2em;
+}
+
+.content-header img {
+  float: right;
+  margin-left: 60em;
+  width: 200px;
+  height: 200px;  
+  border-radius: 334px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  vertical-align: top;
+  display: inline-block;
+ 
+}
+
+/* ensure it looks good on small screens */
+@media (max-width:600px) {
+  .hero {
+    min-height: 55vh;
   }
 
-  .topnav a.icon {
-    float: right;
-    display: block;
+  .corner-blob {
+    width: 28%;
+    height: 16%;
+  }
+
+  .content {
+    left: 1rem;
+    top: 1rem;
+    font-size: 0.9rem;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
+@media(max-width:1024px) {
+  .hamburger {
     display: block;
-    text-align: left;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    font-family: 'work-sans', serif;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
   }
 }
