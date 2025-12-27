@@ -16,63 +16,223 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <nav class="navbar">
-        <a href="#" class="nav-branding">Michael Donar</a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
-          </li>
-          <li class="nav-item">
-            <!-- !!! Add Resume to this !!!-->
-            <button> Download Resume</button>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <section class="hero" aria-label="Decorative teal wave background">
-    <div class="content">
-      <div class="content-header">
-        <h1>Hello I am </h1>
-        <br>
-        <h2>Michael Donar</h2>
-        <p>Recent UX graduate looking to start the journey into the professional world of user research varied <br> in
-          many different industries.
-        </p>
-      <img src="./img/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.webp">
+  <nav class="navbar">
+    <div class="nav-container">
+      <!--- Could add a logo here when made <div class="logo">Your Logo</div> -->
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Connect</a></li>
+        <li class="cv-item"><a href="#" class="cv-button">↓ Download CV</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-    <!-- Layered SVG: top large teal region + two curved bands (band-shadow & band) -->
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img"
-      aria-hidden="false">
-      <!-- Main dark teal large curved shape (top-left heavy) -->
-      <!-- This path forms the big teal area occupying the top and curved down to the right -->
-      <path d="
-      M0,0
-      L1600,0
-      L1600,560
-      C1100,420 700,480 320,540
-      C160,560 40,560 0,540
-      Z" fill="#0f4a48" />
-    </svg>
+  </nav>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>HELLO I AM</h1>
+        <h2>Michael Donar</h2>
+        <p>Fall 2025 graduate of Harrisburg University of Science and Technology, seeking to enter the field of user
+          research and design.
+          <br>
+          <br>
+          With skills in UX, game design, and wargame design, I offer a unique design perspective across a wide range of
+          products and disciplines.</p>
+      </div>
+      <div class="hero-image">
+        <div class="circle-placeholder"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="content-section">
+      <h1>About Me</h1>
+      <h2>7 years of studying both design and development</h2>
+      <div class="content-subsection">
+        <h3>High-school - Web design</h3>
+        <h4>2018-2021</h4>
+        <p>Starting in high school, where I took web design as my selected trade, I quickly discovered my passion for
+          developing high-quality websites—both front-end and back-end.
+          <br>
+          Always eager to learn and try new things, I found myself developing data collection methods for my high school
+          robotics team, creating a public-facing marketing site for a client while still in high school, <br>
+          and winning first place in SkillsUSA Web Design at District 7 in Pennsylvania.</p>
+      </div>
+      <div class="content-subsection">
+        <h3>College - Major In UX/UI Design and Research</h3>
+        <h4>2021-2025</h4>
+        <p>In 2021, I started my studies at Harrisburg University of Science and Technology. After spending three
+          semesters majoring in game design, I found myself increasingly interested in the intersection of human
+          psychology and the design of interactive products.
+          <br>
+          After some thought, I decided to switch my major to User Research to better deepen my interests.
+          <br>
+          During my time at Harrisburg University, I’ve had several opportunities to gain valuable insight into user
+          research and beyond.</p>
+      </div>
+
+      <div class="content-subsection">
+        <h3>Major internship Opportunity - United Stated Army War College </h3>
+        <h4>2021-2025</h4>
+        <p>In the spring of 2025, I took a class titled Special Topics: Games as Simulations. While many of my college
+          courses were important, this one had a profound influence on my career goals.<br><br>
+          Throughout the class, we studied tabletop games and their applications in military, educational, and
+          specialized simulation contexts.<br><br>
+          Although I had always enjoyed playing strategy games—both digital and physical—as a hobby, I had never truly
+          seen their potential as a tool for user research. As the class progressed,
+          I became deeply interested in this field and leveraged my connections within Harrisburg University to secure
+          an internship at the Carlisle Army War College within the Department of Strategic Wargaming,
+          where I developed a symbol generator for use in wargaming. As well revewiing the prdouct with several high
+          ranking memebers at the college. I was aslo expossed to several real world war games
+          To me, this stands as one of my most important academic achievements.<br></p>
+      </div>
+    </section>
+  </main>
+  <!-- Project Sections -->
+  <section class="portfolio-section">
+    <h2>Portfolio</h2>
+    <h3>Click to Read Case Studies on some of my past Project</h3>
+    <section class="projects">
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <div class="project-content">
+            <div class="project-meta">
+              <span>HTML, CSS, JS</span>
+              <span class="tag">2024</span>
+            </div>
+            <h3>Symbol Generator</h3>
+            <p>
+              A generator designed and produced to allow for the quick creation of tactical symbols following
+              MIL-STD-2525B.
+            </p>
+            <a href="#" class="project-btn">Live Demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/project2.jpg" alt="Crisis on Takadona project preview">
+          <div class="project-content">
+            <div class="project-meta">
+              <span>UX Research | Game Design</span>
+              <span class="tag">2024</span>
+            </div>
+            <h3>Crisis On Takadona</h3>
+            <p>
+              A fictional political wargame set in the 1900s following the overthrow of the island’s democratic
+              government.
+            </p>
+            <a href="#" class="project-btn">Case Study →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/project3.jpg" alt="Loop Labs project preview">
+          <div class="project-content">
+            <div class="project-meta">
+              <span>UI-UX Design | HTML, CSS, JS</span>
+              <span class="tag">2024</span>
+            </div>
+            <h3>Loop Labs</h3>
+            <p>
+              Social and collaborative proof of concept for the Harrisburg University Student Union.
+            </p>
+            <a href="#" class="project-btn">Case Study | Live Demo →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <div class="project-content">
+            <div class="project-meta">
+              <span>UX Research | UI Design</span>
+              <span class="tag">2024</span>
+            </div>
+            <h3>Learn it Car App Mockup</h3>
+            <p>
+              Mock-up / proof of concept for an educational learning app guiding users through basic car maintenance
+              skills.
+            </p>
+            <a href="#" class="project-btn">Case Study →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <div class="project-content">
+            <div class="project-meta">
+              <span>UX Research | UI Design</span>
+              <span class="tag">2024</span>
+            </div>
+            <h3>Derelict Golf </h3>
+            <p>
+              Landing page and application marketing site for a golf gambling startup, done with collaboration at
+              Harrisburg University.
+            </p>
+            <a href="#" class="project-btn">Case Study →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <div class="project-content">
+            <div class="project-meta">
+              <span>UI-UX DESIGN | HTML CSS JS</span>
+              <span class="tag">2024</span>
+            </div>
+            <h3>Derelict Golf </h3>
+            <p>
+              Studied the user interfaces of complex video games to understand user pain points and identify
+              opportunities for improvement.
+            </p>
+            <a href="#" class="project-btn">Case Study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
   </section>
-  <script src="./assets/main.js"></script>
+  <section class="contact">
+    <h2>Connect with Me</h2>
+    <p class="contact-sub">
+      Always looking to connect and network no matter the industry
+    </p>
+    <div class="contact-wrapper">
+      <!-- Form -->
+      <form class="contact-form">
+        <input type="text" placeholder="Name*" required>
+        <input type="email" placeholder="Email*" required>
+        <input type="text" placeholder="Location">
+        <input type="text" placeholder="Subject*">
+        <textarea rows="4" placeholder="Message*" required></textarea>
+        <button type="submit">Submit →</button>
+      </form>
+      <!-- Social Icons -->
+      <div class="contact-icons">
+        <a href="https://github.com/YOURNAME" aria-label="GitHub">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/YOURNAME" aria-label="LinkedIn">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="mailto:youremail@email.com" aria-label="Email">
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>
