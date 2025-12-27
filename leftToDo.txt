@@ -1,0 +1,17 @@
+Home page 
+------------------
+Finish Footer 
+
+Fill out image content 
+
+Hook up All links 
+Nav bar links 
+CV File 
+
+Make Word doc with all content that will added to the site 
+
+All projects link to a case study or live demo
+
+Resuse the old site case studies just change style for new site 
+
+Footer 
