@@ -20,6 +20,9 @@
 :root {
     --primary-highlight: #008919;
     --primary-color: #ffffff;
+    --hover-color: #3083DC;
+    --primary-text-color: #000;
+    --sub-text-color: #fff;
 }
 
 /* Reset and General Styles */
@@ -36,6 +39,15 @@ body {
     color: #000;
 }
 
+/*Span Bold*/
+span{
+    font-weight: bold;
+}
+
+.home-link{
+    display: none;
+}
+
 /* Navbar */
 .navbar {
     background-color: #000;
@@ -44,6 +56,8 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid #FFFF00;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 
 }
 
@@ -81,7 +95,7 @@ body {
 }
 
 a:hover {
-    color: var(--primary-highlight);
+    color: var(--hover-color);
 }
 
 .hero h1 {
@@ -89,9 +103,15 @@ a:hover {
 }
 
 .cv-button {
-    border: #008919 1px solid;
+    border: var(--primary-highlight) 1px solid;
     padding: .5em;
     margin-left: 2rem;
+}
+
+.cv-button:hover {
+    background: var(--hover-color);
+    color: var(--primary-color);
+    border: none;
 }
 
 .hamburger {
@@ -167,9 +187,9 @@ a:hover {
     justify-content: flex-end;
 }
 
-.circle-placeholder {
-    width: 200px;
-    height: 200px;
+.hero-image img {
+    width: 400px;
+    height: 400px;
     background-color: #ccc;
     /* Grey */
     border-radius: 50%;
@@ -191,6 +211,10 @@ a:hover {
     padding-top: 1em;
     color: #000;
     font-size: 1em;
+}
+
+.content-section p {
+    max-width: 60ch;
 }
 
 /*Subsections */
@@ -282,8 +306,8 @@ a:hover {
 }
 
 .tag {
-    background: #2cff65;
-    color: #000;
+    background: var(--primary-highlight);
+    color: var(--primary-color);
     padding: 0.2em 0.6em;
     border-radius: 999px;
     font-weight: bold;
@@ -306,7 +330,7 @@ a:hover {
 ========================= */
 .project-btn {
     align-self: flex-start;
-    border: 2px solid #008919;
+    border: 2px solid var(--primary-highlight);
     padding: 0.5rem 1rem;
     border-radius: 6px;
     text-decoration: none;
@@ -316,7 +340,9 @@ a:hover {
 }
 
 .project-btn:hover {
-    background: #008919;
+    background: var(--hover-color);
+    color: var(--sub-text-color);
+    border: none;
 }
 
 .project-btn.outline {
@@ -377,14 +403,14 @@ a:hover {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #8a3dff;
+    border-color: var(--hover-color);
 }
 
 .contact-form button {
     margin-top: 1.5rem;
     width: fit-content;
     background: transparent;
-    border: 2px solid #2cff65;
+    border: 2px solid var(--primary-highlight);
     padding: 0.5rem 1.5rem;
     border-radius: 6px;
     font-weight: bold;
@@ -393,7 +419,9 @@ a:hover {
 }
 
 .contact-form button:hover {
-    background: #2cff65;
+    background: var(--hover-color);
+    color: var(--primary-color);
+    border: none;
 }
 
 /* =========================
@@ -409,7 +437,7 @@ a:hover {
 .contact-icons a {
     width: 40px;
     height: 40px;
-    border: 2px solid #2cff65;
+    border: 2px solid var(--primary-highlight);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -419,7 +447,74 @@ a:hover {
 }
 
 .contact-icons a:hover {
-    background: #2cff65;
+    background: var(--hover-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+/*Footer */
+footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 60px 20px 40px;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--hover-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #aaa;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--hover-color);
+
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    font-size: 0.85rem;
+    color: #777;
 }
 
 /* =========================
@@ -469,6 +564,7 @@ a:hover {
         margin-top: 1rem;
     }
 
+
     .hamburger {
         display: flex;
     }
@@ -492,3 +588,15 @@ a:hover {
         height: 150px;
     }
 }
+
+@media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
