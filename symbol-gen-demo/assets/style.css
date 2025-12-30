@@ -1,0 +1,202 @@
+/* BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", "Montserrat", sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+  color: #222;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #221f20;
+  color: white;
+  padding: 1rem 2rem;
+  gap: 1.5rem;
+  border-bottom: 5px solid  #ffcc01;
+}
+
+header img {
+  height: 40px;
+  width: auto;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* MAIN LAYOUT */
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.symbolSideBar {
+  width: 280px;
+  min-width: 250px;
+  background: white;
+  border-right: 3px solid #ffcc01;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 5em;
+}
+
+#symbolPreview {
+  /*
+  background: #eaf1ff;
+  border: 2px dashed #0077cc;
+  */
+  border-radius: 10px;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:2em;
+}
+
+.symbolSideBar button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 2em;
+}
+
+
+#saveSvg {
+  background: #0077cc;
+  color: white;
+}
+
+#saveSvg:hover {
+  background: #005fa3;
+}
+
+#resetSymbol {
+  background: #ccc;
+  color: #222;
+}
+
+#resetSymbol:hover {
+  background: #aaa;
+}
+
+/* CONTROLS AREA */
+.controls {
+  flex: 1;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  justify-items: center;
+  align-content: start;
+}
+
+.control-group {
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.control-group label {
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.control-group input,
+.control-group select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+.control-group input:focus,
+.control-group select:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+/* FOOTER */
+#footer {
+  background: #221f20;
+  color: white;
+  border-top: 4px solid #ffcc01;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-top: auto; 
+}
+
+
+#footer a {
+  color: #ffcc01;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+/*Mobile CSS should be good for screens up to a small tablet */
+@media (max-width: 700px) {
+  #footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .symbolSideBar {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-right: none;
+    border-bottom: 3px solid #003366;
+  }
+
+  #symbolPreview {
+    width: 180px;
+    height: 180px;
+  }
+
+  .symbolSideBar button {
+    width: auto;
+    min-width: 120px;
+  }
+}

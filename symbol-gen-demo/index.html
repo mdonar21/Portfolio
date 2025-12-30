@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>USAWC MilSymbol Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Loading Milsymbol library from github -->
+  <script src="https://unpkg.com/milsymbol/dist/milsymbol.js"></script>
+  <!--Loading Milsymbol library from locally from files -->
+  <script src="./assets/milsymbol.development.js"></script>
+  <!-- Custom CSS-->
+  <link rel="stylesheet" href="./assets/style.css">
+  <!--Placeholder fav icon for easier id in tab bar-->
+  <link rel="icon" type="image/x-icon" href="./img/logoipsum-399.svg">
+</head>
+
+<body>
+  <!--
+  Header with Logos for USAWC and DSW 
+  -->
+  <header>
+    <img src="./img/US_Army_War_College_SSI.png" alt="Logo Left">
+    <h1>USAWC MilSymbol Generator</h1>
+    <img src="./img/dsw.png" alt="Logo Right">
+  </header>
+  <!--
+  Main Sidebar preview 
+  Any new features added to the html code - 
+  must be added inside this main-layout div 
+  symbolPreview draws the produced icon inside the symbolSideBar div 
+-->
+  <div class="main-layout">
+    <aside class="symbolSideBar">
+      <!--Main display div -->
+      <div id="symbolPreview"></div>
+      <div class="sidebarBTN">
+        <button id="saveSvg"> Save SVG</button>
+        <button id="resetSymbol">Reset</button>
+      </div>
+    </aside>
+    <!--
+      Starts the layout and divs for the main controls screen 
+      any new controls added to the program should follow 
+      <div class="control-group">
+        "div content / controls"
+      </div>
+    -->
+    <main class="controls">
+      <!--
+      Search Bar
+      Search bar has issues with displaying some codes 
+      will be kept however for quailty of life setting
+      -->
+      <div class="control-group">
+        <label for="shapeSearch">Search Symbol</label>
+        <input type="text" id="shapeSearch" placeholder="Search symbol name...">
+        <select id="shape"></select>
+      </div>
+
+      <!--
+      Affiliation Group
+      Modifies the 
+      -->
+      <div class="control-group">
+        <label for="affiliation">Affiliation</label>
+        <select id="affiliation">
+          <option value="F">Friendly</option>
+          <option value="H">Hostile</option>
+          <option value="N">Neutral</option>
+          <option value="J">Joker</option>
+          <option value="U">Unknown</option>
+        </select>
+      </div>
+
+      <!--Color Switching-->
+      <div class="control-group" id="colorBox">
+        <label for="useCustomColor">Symbol Color Options</label>
+
+        <div style="margin-top: 2em; font-size: 12px; text-align: center;">
+          <label>
+            <input type="checkbox" id="useCustomColor">
+            Use Custom Color (Override affiliation color)
+          </label>
+        </div>
+
+        <!-- Hidden unless custom colors are enabled -->
+        <div id="customColorWrapper" style="display: none; margin-top: 8px;">
+          <label for="color">Pick Custom Color:</label>
+          <input type="color" id="color" value="#00aaff">
+        </div>
+      </div>
+
+      <!--Symbol Color
+      <div class="control-group">
+        <label for="color">Symbol Color - Will Overwrite Current Affiliation Color</label>
+        <input type="color" id="color" value="#00aaff">
+      </div>
+    -->
+      <!--Symbol Designation-->
+      <div class="control-group">
+        <label for="label">Unique Designation</label>
+        <input type="text" id="label" placeholder="e.g. Alpha 1">
+      </div>
+
+      <!--Quantity-->
+      <div class="control-group">
+        <label for="quantity">Quantity</label>
+        <input type="text" id="quantity" placeholder="e.g. 3">
+      </div>
+
+      <!--Formation-->
+      <div class="control-group">
+        <label for="higherFormation">Higher Formation</label>
+        <input type="text" id="higherFormation" placeholder="e.g. 2nd Battalion">
+      </div>
+
+      <!--Status-->
+      <!--Damaged is having isssues not modfying the symbol possible error with letter value (c)-->
+      <div class="control-group">
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="P">Present (P)</option>
+          <option value="A">Anticipated/Planned (A)</option>
+          <option value="C">Damaged (C)</option>
+          <option value="X">Destroyed (X)</option>
+        </select>
+      </div>
+
+      <!--Echelon-->
+      <div class="control-group">
+        <label for="echelon">Echelon</label>
+        <select id="echelon">
+          <option value="A">None</option>
+          <option value="T">Team/Crew</option>
+          <option value="B">Squad</option>
+          <option value="C">Section</option>
+          <option value="D">Platoon</option>
+          <option value="E">Company</option>
+          <option value="F">Battalion</option>
+          <option value="G">Regiment</option>
+          <option value="H">Brigade</option>
+          <option value="I">Division</option>
+          <option value="J">Corps</option>
+        </select>
+      </div>
+
+      <!--Mobility-->
+      <div class="control-group">
+        <label for="mobility">Mobility</label>
+        <select id="mobility">
+          <option value="">None</option>
+          <option value="MO">Wheeled</option>
+          <option value="MS">Tracked</option>
+          <option value="MU">Half-Tracked</option>
+          <option value="MB">Amphibious</option>
+          <option value="MC">Airborne</option>
+        </select>
+      </div>
+
+      <!--Headquaters-->
+      <div class="control-group">
+        <label for="hq">HQ / Staff</label>
+        <select id="hq">
+          <option value="">None</option>
+          <option value="A">Headquarters</option>
+        </select>
+      </div>
+
+      <!--Reinforced-->
+      <div class="control-group">
+        <label for="reinforcedReduced">Reinforced / Reduced</label>
+        <select id="reinforcedReduced">
+          <option value="">None</option>
+          <option value="+">Reinforced (+)</option>
+          <option value="-">Reduced (-)</option>
+          <option value="±">Reinforced/Reduced (±)</option>
+        </select>
+      </div>
+
+      <!---Degrees-->
+      <!--A Degree avobve aroud 180 will casue issues with the symbol displaying to high-->
+      <div class="control-group">
+        <label for="direction">Direction (Degrees)</label>
+        <input type="number" id="direction" min="0" max="360" value="45">
+      </div>
+
+      <!--Hide Text -->
+      <div class="control-group">
+        <label for="hideText">Hide Text</label>
+        <input type="checkbox" id="hideText">
+      </div>
+    </main>
+  </div>
+
+
+
+  <!-- 
+  Footer
+  Feel free to remove as needed or add to it 
+-->
+  <footer id="footer">
+    <p> USAWC MilSymbol Generator | Producded By Michael Donar</p>
+    <a href="https://github.com/mdonar21">Github</a>
+    <br>
+    <p> Milsymbol Libarary | By spatialillusions</p>
+    <a href="https://github.com/spatialillusions/milsymbol">Github</a>
+  </footer>
+  <script type="module" src="./assets/main.js"></script>
+</body>
+
+</html>

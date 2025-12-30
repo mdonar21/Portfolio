@@ -27,7 +27,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#project">Portfolio</a></li>
         <li><a href="#contact">Connect</a></li>
-        <li class="cv-item"><a href="#" class="cv-button">↓ Download CV</a></li>
+        <li class="cv-item"><a  href="./img/Michael_Donar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">↓ Download CV</a></li>
       </ul>
       <div class="hamburger">
         <span></span>
@@ -53,7 +53,7 @@
       </div>
   </header>
   <main>
-    <section class="content-section" id="about">
+    <section class="content-section reveal" id="about">
       <h1>About Me</h1>
       <h2>7 years of studying both design and development</h2>
       <div class="content-subsection">
@@ -108,7 +108,7 @@
     <section class="projects">
       <div class="projects-grid">
         <article class="project-card">
-          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <img src="./img/symbol-gen-thumb.png" alt="Symbol Generator project preview">
           <div class="project-content">
             <div class="project-meta">
               <span>HTML, CSS, JS</span>
@@ -117,13 +117,14 @@
             <h3>NATO- Symbol Generator</h3>
             <p>
               A generator designed and produced to allow for the quick creation of tactical symbols following
-              MIL-STD-2525B.
+              MIL-STD-2525B. Created using HTML, CSS, and JavaScript as well as the milsymbol Javascript library.
             </p>
             <a href="#" class="project-btn">Live Demo →</a>
           </div>
         </article>
+        <!-- Build A Force Project Card-->
         <article class="project-card">
-          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <img src="./img/BTF-Thumbnail.png" alt="Build A Force project preview">
           <div class="project-content">
             <div class="project-meta">
               <span>R,Shiny, Dashboard Design, UX</span>
@@ -131,14 +132,14 @@
             </div>
             <h3>Build A Force Updates </h3>
             <p>
-              Brought modern UX to a high-level, R-based military budget simulation.
+              Using Shiny and R, I created a user-friendly interface for military budget simulation.
             </p>
-            <a href="#" class="project-btn">Case Study →</a>
+            <a href="btf.html" class="project-btn" target="_blank">Case Study →</a>
           </div>
         </article>
         <!--Crisis On Takadona-->
         <article class="project-card">
-          <img src="img/project2.jpg" alt="Crisis on Takadona project preview">
+          <img src="./img/matrixGameThumb.jpg" alt="Crisis on Takadona project preview">
           <div class="project-content">
             <div class="project-meta">
               <span>UX Research | Game Design</span>
@@ -146,15 +147,14 @@
             </div>
             <h3>Crisis On Takadona</h3>
             <p>
-              A fictional political wargame set in the 1900s following the overthrow of the island’s democratic
-              government.
+             A fictional political wargame set in the 1900s, following the overthrow of the island's democratic  government. Worked on instructional manuals for the game. Physical map design, faction creation, and user research.
             </p>
             <a href="#" class="project-btn">Case Study →</a>
           </div>
         </article>
-        <!--Loop Labs-->
+        <!--Loop Labs Project Card-->
         <article class="project-card">
-          <img src="img/project3.jpg" alt="Loop Labs project preview">
+          <img src="./img/looplabThumb.png" alt="Loop Labs project preview">
           <div class="project-content">
             <div class="project-meta">
               <span>UI-UX Design | HTML, CSS, JS</span>
@@ -162,14 +162,15 @@
             </div>
             <h3>Loop Labs</h3>
             <p>
-              Social and collaborative proof of concept for the Harrisburg University Student Union.
+              Social and collaborative proof of concept for the Harrisburg University Student Union. Created using
+              HTML, CSS, and JavaScript.
             </p>
             <a href="#" class="project-btn">Case Study | Live Demo →</a>
           </div>
         </article>
         <!--Learn it Car App Mockups-->
         <article class="project-card">
-          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <img src="./img/learnItThumb.png" alt="Learn it Car App Mockup project preview">
           <div class="project-content">
             <div class="project-meta">
               <span>UX Research | UI Design</span>
@@ -185,16 +186,15 @@
         </article>
         <!--GUR Study-->
         <article class="project-card">
-          <img src="img/project1.jpg" alt="Symbol Generator project preview">
+          <img src="./img/golf-thumb.jpg" alt="Derelict Golf project preview">
           <div class="project-content">
             <div class="project-meta">
               <span>UI-UX DESIGN | HTML CSS JS</span>
               <span class="tag">2024</span>
             </div>
-            <h3>Game User Resreach Study  </h3>
+            <h3>Derelict Golf</h3>
             <p>
-              Studied the user interfaces of complex video games to understand user pain points and identify
-              opportunities for improvement.
+              Created a marekting website for a startup Golf betting application using HTML, CSS, and JavaScript on a local Wordpress server. 
             </p>
             <a href="#" class="project-btn">Case Study →</a>
           </div>
@@ -203,7 +203,7 @@
     </section>
   </section>
   <!--Contact Section-->
-  <section class="contact" id="contact">
+  <section class="contact reveal" id="contact">
     <h2>Connect with Me</h2>
     <p class="contact-sub">
       Always looking to connect and network no matter the industry
@@ -266,6 +266,58 @@
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('active');
     });
+
+    // Parallax and Navbar Logic
+    const navbar = document.querySelector('.navbar');
+    const heroSection = document.querySelector('.hero');
+    const heroContent = document.querySelector('.hero-content');
+
+    // Initially hide navbar
+    navbar.classList.add('hidden');
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const heroHeight = heroSection.offsetHeight;
+
+      // Navbar Visibility
+      if (scrollPosition > heroHeight - 100) { // Show slightly before end of hero
+        navbar.classList.remove('hidden');
+      } else {
+        navbar.classList.add('hidden');
+      }
+
+      // Parallax Effect
+      // Only apply if within hero section range to save performance
+      // AND if screen width is greater than 768px (desktop)
+      if (scrollPosition <= heroHeight && window.innerWidth > 768) {
+        const translateY = scrollPosition * 0.4; // Adjust speed factor as needed
+        heroContent.style.transform = `translateY(${translateY}px)`;
+        heroContent.style.opacity = 1 - (scrollPosition / heroHeight); // Optional: Fade out effect
+      }
+    });
+
+    // Scroll Reveal Logic
+    const revealElements = document.querySelectorAll('.reveal');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    // Add reveal class to project cards dynamically if not already present
+    projectCards.forEach(card => card.classList.add('reveal'));
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // Reveal only once
+            }
+        });
+    }, {
+        threshold: 0.15 // Trigger when 15% visible
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+    projectCards.forEach(el => revealObserver.observe(el)); // Ensure cards are observed even if added via JS above
+
+
   </script>
 </body>
 

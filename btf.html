@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USAWC Build A Force | Michael Donar</title>
+    <link rel="icon" type="image/x-icon" href="./img/MD-Logo-With-NoText-White.png">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
+</head>
+
+<body>
+    <!-- Navbar (Same as index) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html#top">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#project">Portfolio</a></li>
+                <li><a href="index.html#contact">Connect</a></li>
+                <li class="cv-item"><a href="./img/Michael_Donar_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                        class="cv-button">↓ Download CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-page">
+        <!-- Header Section -->
+        <header class="project-header reveal">
+            <h1>USAWC Build A Force</h1>
+            <div class="project-meta-details">
+                <span>Dashboard Design, R-Studio/ Shiny</span>
+                <span class="project-tag">2024</span>
+            </div>
+
+            <p class="project-summary">
+                High-level military financial simulation, developed in R-Studio using the Shiny framework.
+            </p>
+        </header>
+
+        <!-- Main Image -->
+        <div class="project-image-container reveal">
+            <img src="./img/btf-before.png" alt="Dashboard before Redesign">
+        </div>
+        <p class="project-image-caption">Dashboard before Redesign</p>
+        <!-- Project Reasoning Section -->
+        <section class="project-content-section reveal">
+            <h2>Project Reasoning</h2>
+            <p>
+                As my first project done for the USAWC Internship, I looked at the dashboard for the simulation
+                "Build The Force" and immediately was drawn to several UI and UX issues within the dashboard. I set out
+                to
+                redesign the dashboard while keeping as much of the back-end original as possible.
+            </p>
+
+            <h2>Main UX Issues </h2>
+            <p>
+                Drawing my initial attention were the <span>color scheme</span> and <span>overall template</span>.
+                Because this is a <span>high-level simulation</span> used throughout the college and accessed by
+                <span>students across not only the US Army but also international </span>, it was important that the
+                interface reflected the quailty of resreach and prdoucts crated in the USWAC.
+
+            </p>
+            <h2>Error Reporting</h2>
+            <p>
+                A key <span>usability issue</span> I quickly identified was the use of <span>green</span> to indicate
+                both <span>successful simulation states</span> and <span>error messages</span>. While the text content
+                changed, the color remained the same, making it difficult for users to <span>quickly identify
+                    errors</span> without carefully reading the message. This slowed <span>user flow</span> and
+                increased <span>cognitive load</span>. By introducing a <span>clear visual distinction</span>—using
+                <span>green for success</span> and <span>red for errors</span>—the experience was significantly improved
+                when reviewing simulation results.
+            </p>
+            <br>
+            <div class="project-image-container">
+                <img src="./img/btf-error-report.png" alt="Dashboard before Redesign">
+            </div>
+            <p class="project-image-caption">Error Reporting UI Changes</p>
+    
+            <h2>Overall Template Changes</h2>
+            <p>
+                The primary design issue stemmed from the existing template not conveying a <span>modern, high-quality
+                    UI</span>. After exploring available <span>Shiny</span> themes, I selected and modified the <span
+                    style="font-style: italic;">Flaty</span> template to better align with the <span>professional and
+                    modern interface</span> expected of a <span>high-level simulation</span>. These changes helped
+                elevate the perceived <span>credibility and polish</span> of the platform.
+            </p>
+
+            <h2>Challenges</h2>
+            <p>
+                This project marked my <span>first experience with R</span> as well as my initial exposure to the
+                <span>Shiny framework</span>. A significant portion of the project timeline was dedicated to
+                <span>learning the language</span>, understanding its <span>development patterns</span>, and becoming
+                comfortable working within the Shiny environment.
+            </p>
+
+            <h2>Outcomes</h2>
+            <p>
+                Despite limited communication with my mentor due to a <span>government shutdown</span>, I was able to
+                <span>exceed project expectations</span>. In addition to delivering the required
+                <span>wireframes</span>, I independently learned the framework and fully redesigned the <span>first two
+                    pages of the simulation</span>, while preparing the remaining pages for <span>rapid future
+                    implementation</span>.
+            </p>
+
+        </section>
+
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-name">Michael Donar</div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html#top">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#project">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://github.com/mdonar21" target="_blank" aria-label="GitHub">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/michael-donar/" target="_blank" aria-label="LinkedIn">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="mailto:21mdonar@gmail.com" target="_blank" aria-label="Email">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Scroll Reveal Logic
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Reveal only once
+                }
+            });
+        }, {
+            threshold: 0.15 // Trigger when 15% visible
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>
