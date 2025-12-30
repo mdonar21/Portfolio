@@ -2,16 +2,16 @@ Home page
 ------------------
 Center Headshot Image 
 
-Possible fill whole screen with green header
+✔️ Possible fill whole screen with green header
 
 Align all buttons for project cards 
 
-Finish Footer 
+✔️ Finish Footer 
 
-Fill out image content 
+✔️ Fill out image content 
 
-Hook up All links 
-Nav bar links 
+✔️ Hook up All links 
+✔️ Nav bar links 
 CV File 
 
 Make Word doc with all content that will added to the site 
@@ -20,4 +20,4 @@ All projects link to a case study or live demo
 
 Resuse the old site case studies just change style for new site 
 
-Footer 
+✔️ Footer 
