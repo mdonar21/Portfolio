@@ -1,5 +1,11 @@
 Home page 
 ------------------
+Center Headshot Image 
+
+Possible fill whole screen with green header
+
+Align all buttons for project cards 
+
 Finish Footer 
 
 Fill out image content 
