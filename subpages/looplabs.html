@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martix Game | Michael Donar</title>
+    <link rel="icon" type="image/x-icon" href="../img/MD-Logo-With-NoText-White.png">
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html#top">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#project">Portfolio</a></li>
+                <li><a href="../index.html#contact">Connect</a></li>
+                <li class="cv-item"><a href="../img/Michael_Donar_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                        class="cv-button">↓ Download CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-page">
+        <header class="project-header reveal">
+            <h1>Loop Labs</h1>
+            <div class="project-meta-details">
+                <span>Web Development, UI Design, Howler.js, GitHub</span>
+                <span class="project-tag">2025</span>
+            </div>
+            <p class="project-summary">
+                Developed as part of a freeform project on <span>student engagement</span>, I served as the primary
+                developer
+                for a <span>music-based web application</span> designed for public spaces.
+            </p>
+        </header>
+
+        <div class="project-image-container reveal">
+            <img src="../img/loop-labs-preview.png" alt="Loop Labs music interface">
+        </div>
+        <p class="project-image-caption">Interactive music-making interface for student collaboration</p>
+
+        <section class="project-content-section reveal">
+            <h2>Overview</h2>
+            <p>
+                Working in a group of three, we explored ways to increase <span>student interaction</span> within the
+                university's
+                student union. Our solution involved a <span>reusable and expandable</span> music creation program that
+                lowered the barrier to entry for creative expression.
+            </p>
+
+            <h2>The Problem</h2>
+            <p>
+                The Student Union is often perceived as a quiet, functional workplace rather than a social hub. While a
+                piano
+                is available, its high skill floor limits engagement. We wanted to create a tool with a <span>lower
+                    barrier to entry</span>
+                that encourages collective creativity.
+            </p>
+
+            <h2>Research & Analysis</h2>
+            <p>
+                Our research began by analyzing <span>JavaScript audio tools</span> and existing music apps like
+                <span>Patatap</span>
+                and <span>Bloom</span> to ensure technical feasibility. We studied how <span>keyboard-controlled
+                    soundboards</span>
+                could be adapted into a physical installation using existing campus infrastructure, such as projectors
+                and speakers.
+            </p>
+            <p>
+
+            </p>
+            <p>
+                Market analysis revealed gaps in current tools—many require subscriptions or lack <span>collaborative
+                    features</span>.
+                Loop Labs was designed to bridge these gaps by combining <span>public interactivity</span> with
+                <span>live sound manipulation</span>.
+            </p>
+
+            <h2>The Solution</h2>
+            <p>
+                <span>Loop Labs</span>: A simple yet powerful music-making device. By leveraging the <span>Howler.js
+                    library</span>,
+                we created a platform where students could collaborate on soundscapes, turning the Student Union into an
+                <span>immersive audio environment</span>.
+            </p>
+
+            <h2>Deliverables</h2>
+            <h3>Technical Implementation</h3>
+            <p>
+                I served as the <span>Lead Developer</span>, managing the codebase via <span>GitHub</span>. We chose
+                <span>GitHub Pages</span> for deployment to ensure the project remained accessible for long-term
+                collaboration and demonstration.
+            </p>
+
+            <h3>Project Documentation</h3>
+            <p>
+                We produced two comprehensive proposals: an initial feasibility study and a final report detailing
+                the <span>user feedback</span> and technical outcomes of the prototype.
+            </p>
+
+            <h2>Outcomes</h2>
+            <p>
+                The project successfully demonstrated how <span>accessible UX design</span> can transform a static
+                physical space into an <span>engaging social experience</span>. I learned how to manage <span>technical
+                    constraints</span>
+                in a web-based audio project while discovering the potential for <span>hybrid digital-physical
+                    installations</span>.
+            </p>
+
+            <br>
+            <br>
+            <a href="https://github.com/mdonar21/loop-labs" class="project-btn-large" target="_blank">View on GitHub→</a>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-name">Michael Donar</div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#top">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#project">Portfolio</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://github.com/mdonar21" target="_blank" aria-label="GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/michael-donar/" target="_blank" aria-label="LinkedIn"><i
+                        class="fa fa-linkedin"></i></a>
+                <a href="mailto:21mdonar@gmail.com" target="_blank" aria-label="Email"><i
+                        class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Standard Mobile Menu Logic
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Scroll Reveal Logic
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>
