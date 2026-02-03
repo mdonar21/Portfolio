@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USAWC Symbol Generator | Michael Donar</title>
+    <link rel="icon" type="image/x-icon" href="../img/MD-Logo-With-NoText-White.png">
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html#top">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#project">Portfolio</a></li>
+                <li><a href="../index.html#contact">Connect</a></li>
+                <li class="cv-item"><a href="../img/Michael_Donar_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                        class="cv-button">↓ Download CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-page">
+        <header class="project-header reveal">
+            <h1>Crisis in the Capital</h1>
+            <div class="project-meta-details">
+                <span>Game Design, User Research, World Building</span>
+                <span class="project-tag">2024</span>
+            </div>
+            <p class="project-summary">
+                Taking the opportunity to work on a unique project outside of my field, I encountered <span>new
+                    challenges</span>
+                that tested and expanded my UX skills within the world of <span>professional wargaming</span>.
+            </p>
+        </header>
+
+        <div class="project-image-container reveal">
+            <img src="../img/wg1.jpg" alt="Crisis On Takodana Matrix game laid out on a table">
+        </div>
+        <p class="project-image-caption">Crisis On Takodana Matrix game session in progress</p>
+
+        <section class="project-content-section reveal">
+            <h2>Overview</h2>
+            <p>
+                Looking to branch out during my second-to-last semester, I joined a special topics class focused on
+                <span>games and simulations</span>.
+                Despite being a UX student in a room full of game designers, this experience opened my eyes to how
+                <span>research and user expression</span>
+                intersect in complex wargaming formats.
+            </p>
+
+            <h2>The Problem</h2>
+            <p>
+                The central challenge was to utilize <span>wargaming formats</span> to educate players on complex and
+                often
+                uncomfortable political topics through <span>gamification</span>.
+            </p>
+
+            <h2>The Solution: Matrix Games</h2>
+            <p>
+                We utilized the <span>Matrix Game format</span> to help students understand how political crises spiral
+                out of control.
+                As described by Tom Mouat: <em>“In a Matrix Game, you simply explain why something should happen, the
+                    Umpire determines
+                    the likelihood, and you roll a die.”</em> This allows for high <span>user expression</span> and
+                freedom.
+            </p>
+
+            <h2>My Role in Design</h2>
+            <p>
+                In the early stages, my primary role was <span>world-building</span>, where I helped create the
+                fictional setting and
+                lore of the nation of Takodana. Once the narrative foundation was set, I moved into developing
+                <span>technical deliverables</span>.
+            </p>
+
+            <h2>Deliverables</h2>
+            <h3>Player Guide</h3>
+            <p>
+                I proposed and designed a <span>player guide</span> as an essential learning tool. This booklet bridged
+                the gap
+                between lore and mechanics, making the <span>Matrix Game rules</span> accessible to new players.
+            </p>
+
+            <h3>The Map</h3>
+            <p>
+                Using <span>Figma</span>, I designed the digital game board. We prioritized a <span>digital
+                    format</span> over physical
+                to ensure the game was easily distributable and accessible for remote or local play.
+            </p>
+
+            <div class="project-image-container reveal">
+                <img src="../img/wg2.jpg" alt="Crisis On Takodana Matrix game laid out on a table">
+            </div>
+            <p class="project-image-caption">Research Symposium Poster</p>
+            <h2>Outcomes</h2>
+            <p>
+                Through iterative testing, our team identified <span>usability issues</span> that led to crucial
+                redesigns, ensuring
+                a <span>low entry level</span> while maintaining player freedom.
+            </p>
+            <p>
+                On a personal level, this project is being developed into an <span>academic paper</span>. I discovered a
+                passion for
+                applying <span>UX research</span> to highly technical, non-traditional fields like professional
+                simulation.
+            </p>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-name">Michael Donar</div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#top">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#project">Portfolio</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://github.com/mdonar21" target="_blank" aria-label="GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/michael-donar/" target="_blank" aria-label="LinkedIn"><i
+                        class="fa fa-linkedin"></i></a>
+                <a href="mailto:21mdonar@gmail.com" target="_blank" aria-label="Email"><i
+                        class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>
