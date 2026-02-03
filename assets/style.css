@@ -386,6 +386,30 @@ a:hover {
     background: transparent;
 }
 
+.project-btn-large {
+    align-self: center;
+    margin-top: auto;
+    border: 2px solid var(--primary-highlight);
+    padding: 1rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    transition: 0.2s ease;
+    font-size: 1.5rem;
+}
+
+.project-btn-large:hover {
+    background: var(--hover-color);
+    color: var(--sub-text-color);
+    border: none;
+}
+
+.project-btn-large.outline {
+    background: transparent;
+}
+
+
 /* =========================
    Contact Section
 ========================= */
@@ -555,6 +579,15 @@ footer {
     color: #777;
 }
 
+.tech-highlight {
+    background-color: #f0f4f8; /* Light blue-grey background */
+    color: #2d3748;            /* Darker text for contrast */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced to look like code */
+    border: 1px solid #e2e8f0;
+}
 
 /* =========================
    Responsive
@@ -704,9 +737,7 @@ footer {
 }
 
 .project-image-container {
-    border-radius: 10%;
-    border: #000 2px;
-    border-style: solid;
+    
     width: 100%;
     aspect-ratio: 16 / 9; /* Standard landscape ratio */
     display: flex;
@@ -715,7 +746,6 @@ footer {
     color: #666;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    border-radius: 4px;
     overflow: hidden;
     position: relative;
 }
