@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martix Game | Michael Donar</title>
+    <link rel="icon" type="image/x-icon" href="../img/MD-Logo-With-NoText-White.png">
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html#top">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#project">Portfolio</a></li>
+                <li><a href="../index.html#contact">Connect</a></li>
+                <li class="cv-item"><a href="../img/Michael_Donar_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                        class="cv-button">↓ Download CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-page">
+        <header class="project-header reveal">
+            <h1>Learn It</h1>
+            <div class="project-meta-details">
+                <span>UX/UI Design, User Research, Mobile Prototyping</span>
+                <span class="project-tag">2025</span>
+            </div>
+            <p class="project-summary">
+                Developed for the <em>Patterns and Context</em> course, this app mockup provides a <span>comprehensive
+                    learning platform</span>
+                for users interested in performing their own <span>car maintenance</span>.
+            </p>
+        </header>
+
+        <div class="project-image-container reveal">
+            <img src="../img/learnit-1.jpeg" alt="Learn It app homescreen">
+        </div>
+        <p class="project-image-caption">Learn it Homescreen Mockups</p>
+
+        <section class="project-content-section reveal">
+            <h2>Overview</h2>
+            <p>
+                As a semester-long project covering <span>user research</span> and interface design, <em>Learn It</em>
+                went
+                through multiple iterations to achieve <span>ease of use</span> while providing a high level of
+                technical
+                knowledge for novice mechanics.
+            </p>
+            <div class="project-image-container reveal">
+                <img src="../img/learnit-2.png" alt="Learn It app homescreen">
+            </div>
+            <p class="project-image-caption">Learn it Tool Checklist</p>
+            <h2>The Problem</h2>
+            <p>
+                Many hobbyists struggle with <span>incomplete advice</span> or starting projects
+                <span>unprepared</span>.
+                I wanted to create a solution that ensured users had a <span>validated checklist of tools</span> and
+                access to <span>high-quality, accurate video tutorials</span> before ever picking up a wrench.
+            </p>
+
+            <h2>The Solution</h2>
+            <p>
+                The <em>Learn It</em> mobile application bridges a gap in the market for <span>all-in-one maintenance
+                    help</span>.
+                By featuring <span>community-generated content</span> that is vetted for accuracy, the app fosters a
+                transparent and <span>trustworthy learning environment</span> for car owners.
+            </p>
+            <div class="project-image-container reveal">
+                <img src="../img/learnit-mock.png" alt="Learn It app wireframes">
+            </div>
+            <p class="project-image-caption">Learn it Tool Figma Wireframes</p>
+            <h2>Deliverables</h2>
+            <h3>Iterative Mockup Sets</h3>
+            <p>
+                The initial <span>low-fidelity mockups</span> were designed over three weeks, incorporating <span>peer
+                    feedback</span>
+                and professor requirements to refine the core navigation and user flow.
+            </p>
+
+            <h3>Final High-Fidelity Prototypes</h3>
+            <p>
+                Using <span>Figma</span>, I developed the final interactive prototypes. These versions utilized a
+                <span>refined color palette</span> and incorporated an improved <span>video playback area</span>
+                and a dedicated <span>community forum section</span> for troubleshooting.
+            </p>
+
+            <h2>Outcomes</h2>
+            <p>
+                This project provided significant insight into <span>user context</span> and how to design around
+                specific,
+                high-stakes needs. Beyond the classroom, I am currently continuing to develop this concept into a
+                <span>fully functional prototype</span>.
+            </p>
+
+            <br>
+            <br>
+            <a href="#" class="project-btn-large">View Figma Prototype →</a>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-name">Michael Donar</div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#top">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#project">Portfolio</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://github.com/mdonar21" target="_blank" aria-label="GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/michael-donar/" target="_blank" aria-label="LinkedIn"><i
+                        class="fa fa-linkedin"></i></a>
+                <a href="mailto:21mdonar@gmail.com" target="_blank" aria-label="Email"><i
+                        class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>
