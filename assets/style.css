@@ -185,6 +185,8 @@ a:hover {
 
 .hero-text {
     flex: 1;
+    text-align: center;
+    font-size: larger;
 }
 
 .hero-text h1 {
@@ -207,9 +209,8 @@ a:hover {
 }
 
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    align-content: center;
+ 
 }
 
 .hero-image img {

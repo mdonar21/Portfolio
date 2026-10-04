@@ -15,8 +15,9 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
 </head>
+
 <body>
-  <div class="home-link" ></div>
+  <div class="home-link"></div>
   <!--Needed for Linking keep display as none-->
   <section id="top"></section>
   <nav class="navbar">
@@ -27,7 +28,8 @@
         <li><a href="#about">About</a></li>
         <li><a href="#project">Portfolio</a></li>
         <li><a href="#contact">Connect</a></li>
-        <li class="cv-item"><a  href="./img/Michael_Donar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">↓ Download CV</a></li>
+        <li class="cv-item"><a href="./img/Michael_Donar_Resume.pdf" target="_blank" rel="noopener noreferrer"
+            class="cv-button">↓ Download CV</a></li>
       </ul>
       <div class="hamburger">
         <span></span>
@@ -36,6 +38,19 @@
       </div>
     </div>
   </nav>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>HELLO I AM</h1>
+        <h2>Michael Donar</h2>
+        <div class="hero-image">
+          <div class="image-background"></div>
+          <img src="./img/headshot.png" alt="Profile Image">
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Old Header Code 
   <header class="hero">
     <div class="hero-content">
       <div class="hero-text">
@@ -52,6 +67,7 @@
         <img src="./img/headshot.png" alt="Profile Image">
       </div>
   </header>
+  <--->
   <main>
     <section class="content-section reveal" id="about">
       <h1>About Me</h1>
@@ -60,8 +76,10 @@
         <h3>High-school - Web design</h3>
         <h4>2018-2021</h4>
         <p>
-          Starting in high school, where I studied <span>web design</span> as my chosen trade, I quickly discovered a
-          passion for building high-quality websites across <span>both front-end and back-end development.</span> Driven
+          Starting in high school, where I studied <span>web design</span> as my chosen trade, I quickly discovered
+          a
+          passion for building high-quality websites across <span>both front-end and back-end development.</span>
+          Driven
           by curiosity and a desire to learn, I developed data collection tools for my high school robotics team,
           created a public-facing marketing website for a <span>real client while still in school</span>, and earned
           <span>first place</span> in SkillsUSA Web Design at Pennsylvania District 7.
@@ -82,19 +100,24 @@
       <div class="content-subsection">
         <h3>Major internship Opportunity - United Stated Army War College </h3>
         <h4>2021-2025</h4>
-        <p>In <span>Spring 2025</span>, I took a <span>nonrequired</span> class Special Topics: Games as Simulations, a
+        <p>In <span>Spring 2025</span>, I took a <span>nonrequired</span> class Special Topics: Games as
+          Simulations, a
           class that had a major impact on my career
-          path. We explored tabletop games and their use in military, educational, and specialized simulation contexts,
+          path. We explored tabletop games and their use in military, educational, and specialized simulation
+          contexts,
           learning how game mechanics can model real-world scenarios and decision-making processes.
 
-          I had always enjoyed strategy games as a hobby, but this class opened my eyes to their potential as tools for
-          user research and systems analysis. Building on what I learned, I secured an <span>internship at the Carlisle
+          I had always enjoyed strategy games as a hobby, but this class opened my eyes to their potential as tools
+          for
+          user research and systems analysis. Building on what I learned, I secured an <span>internship at the
+            Carlisle
             Army
             War College in the Department of Strategic Wargaming</span>, where I developed a symbol generator for
           wargames,
           reviewed the tool with <span>senior staff</span>, and observed several <span>real-world wargames in
             action</span>. This experience gave
-          me hands-on insight into how interactive simulations can inform strategy and research, and <span>remains one
+          me hands-on insight into how interactive simulations can inform strategy and research, and <span>remains
+            one
             of my
             most meaningful academic achievements.</span></p>
       </div>
@@ -147,7 +170,9 @@
             </div>
             <h3>Crisis On Takadona</h3>
             <p>
-             A fictional political wargame set in the 1900s, following the overthrow of the island's democratic  government. Worked on instructional manuals for the game. Physical map design, faction creation, and user research.
+              A fictional political wargame set in the 1900s, following the overthrow of the island's democratic
+              government. Worked on instructional manuals for the game. Physical map design, faction creation, and
+              user research.
             </p>
             <a href="./subpages/martixGame.html" class="project-btn" target="_blank">Case Study →</a>
           </div>
@@ -305,21 +330,20 @@
     projectCards.forEach(card => card.classList.add('reveal'));
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Reveal only once
-            }
-        });
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // Reveal only once
+        }
+      });
     }, {
-        threshold: 0.15 // Trigger when 15% visible
+      threshold: 0.15 // Trigger when 15% visible
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
     projectCards.forEach(el => revealObserver.observe(el)); // Ensure cards are observed even if added via JS above
-
-
   </script>
+
 </body>
 
 </html>
